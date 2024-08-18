@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tea House</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- google font link -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- font awesome link -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+        <!-- font awesome link -->
     <script src="https://kit.fontawesome.com/2b9f8771db.js" crossorigin="anonymous"></script>
     <!-- tailwind link -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,14 +19,18 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
-                    }
-                }
-            }
+                    },
+                    fontFamily: {
+                        'manrope': ['Manrope','sans-serif'],
+                    },
+                },
+            },
         }
+    
     </script>
 </head>
 
-<body>
+<body class="font-manrope">
     <main class="max-w-screen-xl mx-auto px-5 lg:px-24">
         <header class="lg:flex lg:justify-between lg:pt-12 mb-20 pt-5 md:flex md:justify-between">
             <!-- text content -->
@@ -168,7 +170,7 @@
                 <div class="relative">
                     <!-- middle card -->
                     <div class="absolute z-10 top-36">
-                        <div class="h-56  bg-white rounded-lg w-full  space-y-4 p-6  lg:w-4/5">
+                        <div class="h-56  bg-white rounded-lg w-full  lg:space-y-4 p-6  lg:w-4/5 space-y-2">
                             <div class="absolute rounded-full  -top-8 -left-8 border-4 border-white">
                                 <img src="images/client.png" alt="">
                             </div>
@@ -176,7 +178,7 @@
                                 services for the people who are interested to treatment</p>
                             <p class="text-bold text-base ">Ilham Yuda</p>
                             <p class="text-[#777777] text-base">Businessman</p>
-                            <div class="absolute bottom-3 right-28">
+                            <div class="absolute lg:bottom-3 lg:right-28 bottom-3 right-2">
                                 <img src="images/circles.png" alt="">
                             </div>
                         </div>
@@ -271,11 +273,13 @@
 
     <footer class="mt-12 bg-[#ffece8] lg:py-28 lg:px-52 py-5 px-5">
         <!-- logo div -->
-         <div class="flex justify-between mb-12">
-            <img src="images/cup.png" alt="">
-            <div class="flex gap-5">
+         <div class="lg:flex lg:justify-between mb-12">
+            <div class="flex justify-center items-center mb-5">
+                <img src="images/cup.png" alt="" class="">
+            </div>
+            
+            <div class="flex gap-6">
                 <p class="text-xl text-[#494949] my-auto">Ready to get strated?</p>
-                
                 <button
                 class="px-5 py-4 bg-gradient-to-r from-[#FF8938] to-[#FF0000] text-white rounded-xl font-bold text-xl">Get Started</button>
             </div>
